@@ -1,0 +1,32 @@
+.DS_Store
+
+# App and package artifacts
+*.zip
+*.dmg
+*.app
+*.xcarchive
+DerivedData/
+build/
+dist/
+scratch/
+tmp/
+out/
+output/
+
+# Secrets and signing material
+.env
+.env*
+*.p8
+*.p12
+*.cer
+*.mobileprovision
+AuthKey_*.p8
+signing.env
+notarization-profile.env
+
+# Local TextRay data
+.textray/
+TextRay/
+notes/
+drafts/
+trash/
