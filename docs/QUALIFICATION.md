@@ -23,7 +23,7 @@ The actual updater succeeded when the test app was launched through Finder. Earl
 
 The public build enables purchase routing and updates release/policy wording. The app, installer and disk image passed notarization and stapling; feed/archive signatures passed verification. Thirteen focused commerce/installation tests and 31 backend tests passed. Downloaded public installer and update files matched the qualified SHA-256 hashes. Native browser playback and seeking passed after adding bounded streaming byte-range responses for videos.
 
-Production checkout and email delivery are still being qualified during the initial rollout; the purchase page remains closed. No live purchase has been made or claimed as part of these checks.
+Production checks verified the live Stripe account, the EUR39.99 inclusive price, Managed Payments checkout, cancellation return, unsigned-webhook rejection and scheduled event reconciliation. The owner confirmed receipt of the single delivery-check message in the test recipient’s Inbox. Checkout is open. No real-money purchase was made: production paid-license issuance, recovery and refund are not claimed as new end-to-end tests; their actual provider test-mode qualification is recorded above.
 
 ## Memory and larger libraries
 
@@ -47,6 +47,6 @@ This does not mean data loss is impossible. Independent backups, visible storage
 
 - Intel and other macOS versions are not runtime-qualified by an Apple-silicon test, even though a universal binary and an older deployment target compile.
 - The original two-Mac sync acceptance is separate from the current one-Mac/two-store probe. No new multi-week or two-Mac result is implied here.
-- Production checkout and delivered recovery email remain outside the completed qualification until the rollout checks are recorded.
+- A completed real-money purchase and its delivered license/recovery email were not part of publication qualification. Production sender delivery and unpaid checkout were checked separately.
 
 [Architecture](ARCHITECTURE_OVERVIEW.md) · [Distribution](PACKAGING_AND_DISTRIBUTION.md)

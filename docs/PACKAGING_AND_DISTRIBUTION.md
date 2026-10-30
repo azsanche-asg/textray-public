@@ -24,4 +24,4 @@ Expiry of the trial keeps retained work available for reading, copying, saving, 
 
 Activation, recovery and device transfer use a product-specific service. The app verifies signed receipts locally; trial timing and device proof live in Keychain rather than in the synced text library. Normal reinstallation does not restart a trial.
 
-The signed trial is publicly downloadable. During the initial rollout, checkout remains closed until production provider and email-delivery checks are complete. The purchase page states current availability.
+The signed trial and purchase checkout are public. Production checks verified the live account, inclusive EUR39.99 price, Managed Payments checkout, cancellation route, scheduled event reconciliation and delivery from the production email sender.

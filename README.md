@@ -49,7 +49,7 @@ Documents and organization live in a transactional local library. Inactive tabs 
 
 ## Getting TextRay
 
-Download TextRay 1.0, watch real workflows and start the full 30-day trial at the [official TextRay website](https://textray.burritoslabs.com/). No card or account is required to start the trial. The website is the canonical download and purchase destination. During the initial rollout, the trial is available while checkout remains closed for final production payment and email-delivery checks.
+Download TextRay 1.0, watch real workflows and start the full 30-day trial at the [official TextRay website](https://textray.burritoslabs.com/). No card or account is required to start the trial. The website is the canonical download and purchase destination.
 
 The offer is **€39.99 including applicable taxes, once for TextRay 1.x on two personal Macs**. A **full 30-day trial** starts explicitly in the app, with no card or account required. Released 1.x updates are included; future major upgrades are optional. There is no subscription or separate TextRay charge for iCloud sync or Views.
 

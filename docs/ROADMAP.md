@@ -6,9 +6,9 @@ TextRay’s focus is reducing the work around text: capture immediately, find pr
 
 Persistent drafts; free windows and tabs; automatic and named sessions; overlapping workspaces; folder projects; deterministic search and live Views; checkpoints and recovery copies; opt-in iCloud sync; professional editing tools; Markdown preview; session starters and return notes; a 30-day trial, licensing and signed updates.
 
-## Initial rollout
+## Public release
 
-The signed 1.0.0 (28) trial, tutorials and website are public. Checkout remains closed while production payment and email-delivery checks are completed. Private test-payment evidence and public download artifacts are identified separately.
+The signed 1.0.0 (28) trial, tutorials, website and purchase checkout are public. Production configuration, unpaid checkout, scheduled reconciliation and email delivery checks passed. Private test-payment evidence and public download artifacts are identified separately.
 
 ## After launch
 
