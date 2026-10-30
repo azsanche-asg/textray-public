@@ -1,47 +1,27 @@
-# Packaging And Distribution
+# Distribution and compatibility
 
-TextRay currently uses a DMG-first direct macOS distribution path for private-alpha preparation. This document describes status honestly for portfolio review.
+TextRay is distributed directly through [textray.burritoslabs.com](https://textray.burritoslabs.com/). The website is the canonical source for downloads, tutorials and purchases. This repository does not distribute app binaries or act as an update feed.
 
-## Release Build
+## Release path
 
-The private project has Debug and Release build verification through Xcode. The public mirror does not include the Xcode project, source files, tests, built apps, or build products.
+- A Developer ID signed, hardened-runtime application and guided installer.
+- Apple notarization and stapling, with Gatekeeper verification.
+- A DMG whose installer lets you choose a destination without moving or resetting your library.
+- Sparkle updates with signed feeds and signed archives, checked before extraction.
+- Explicit 30-day trial start and signed, device-bound licenses that work offline after activation.
 
-## DMG Packaging
+The public release is **1.0.0 (28)**, signed, notarized and stapled with purchases enabled. Its preceding private 1.0.0 (27) candidate passed actual installation from the mounted image and an actual signed update/relaunch. See [qualification](QUALIFICATION.md) for the exact scope and caveats.
 
-The private project includes local packaging scripts that can create private-alpha artifacts under an ignored `dist/` directory. DMG is the preferred direct-distribution artifact. ZIP packaging exists as an internal fallback/check artifact.
+## Compatibility
 
-The DMG package contains the app bundle and an Applications symlink. Package artifacts do not include user notes, drafts, `.textray` metadata, local trash, credentials, certificates, signing profiles, or local signing environment files.
+The release supports **Apple silicon, macOS Tahoe 26.6.2 or later in the Tahoe 26 release line**. Runtime qualification was performed on 26.6.2. The binary includes an Intel slice and an older macOS deployment target, but compilation alone does not establish supported runtime behavior. The download page and update feed enforce the advertised compatibility requirements.
 
-## Developer ID Signing
+## Offer and ownership
 
-The private project includes a Developer ID signing path for a copied app bundle when an appropriate local signing identity is available. It also includes read-only signing status inspection using standard macOS tools.
+The price is **€39.99 including applicable taxes, once for TextRay 1.x on two personal Macs**. The full trial lasts **30 days**, with no card or account required to start. Released 1.x updates are included; future major upgrades are optional. iCloud sync and Views do not carry a separate TextRay charge. Apple’s iCloud account and storage requirements still apply.
 
-The mirror does not include signing identities, certificates, private keys, provisioning profiles, app-specific passwords, API keys, or Developer ID identity strings.
+Expiry of the trial keeps retained work available for reading, copying, saving, export and recovery. It does not delete drafts or interrupt an already accepted write.
 
-## Verification Tools
+Activation, recovery and device transfer use a product-specific service. The app verifies signed receipts locally; trial timing and device proof live in Keychain rather than in the synced text library. Normal reinstallation does not restart a trial.
 
-The private packaging/signing workflow uses standard macOS tooling where appropriate:
-
-- `hdiutil` for DMG creation and mounting.
-- `codesign` for app signature verification.
-- `spctl` for Gatekeeper assessment.
-
-## Notarization And Stapling Status
-
-Notarization is not complete.
-
-Stapling is not complete.
-
-Gatekeeper warnings or blocks may still occur until notarization and stapling are completed.
-
-## Install Guide Status
-
-The private project includes private-alpha install and first-run guidance. That guidance is cautious: TextRay is not a public release, not a Mac App Store build, not notarized, and not stapled.
-
-## Current Limitations
-
-- Public release is not complete.
-- The Mac App Store is not the current target.
-- Notarization/stapling are future work.
-- This public mirror is not a download channel.
-- No app binaries, DMGs, ZIPs, or release artifacts are included here.
+The signed trial is publicly downloadable. During the initial rollout, checkout remains closed until production provider and email-delivery checks are complete. The purchase page states current availability.

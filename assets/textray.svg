@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254" role="img" aria-labelledby="tr-title tr-desc" class="textray-logo still">
+<title id="tr-title">TextRay</title><desc id="tr-desc">A blue ray rises from the lower left, illuminating lines of text on a dark rounded tile.</desc>
+<defs>
+  <linearGradient id="tr-tile" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#232e3c"/><stop offset=".45" stop-color="#141b25"/><stop offset="1" stop-color="#0b111b"/></linearGradient>
+  <radialGradient id="tr-surface" cx=".25" cy="0" r="1"><stop stop-color="#738ca7" stop-opacity=".12"/><stop offset=".65" stop-color="#738ca7" stop-opacity="0"/></radialGradient>
+  <linearGradient id="tr-rim" x1="0" y1="0" x2=".6" y2="1"><stop stop-color="#718298" stop-opacity=".6"/><stop offset=".35" stop-color="#536377" stop-opacity=".12"/><stop offset="1" stop-color="#718298" stop-opacity=".26"/></linearGradient>
+  <linearGradient id="tr-white" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eaf2ff"/></linearGradient>
+  <linearGradient id="tr-beam" gradientUnits="userSpaceOnUse" x1="277" y1="973" x2="1020" y2="430"><stop stop-color="#24c8ff" stop-opacity=".98"/><stop offset=".28" stop-color="#087fff" stop-opacity=".84"/><stop offset=".68" stop-color="#0849df" stop-opacity=".40"/><stop offset="1" stop-color="#073bba" stop-opacity="0"/></linearGradient>
+  <linearGradient id="tr-edge" gradientUnits="userSpaceOnUse" x1="277" y1="973" x2="1080" y2="105"><stop stop-color="#71e7ff"/><stop offset=".4" stop-color="#1cbdff" stop-opacity=".85"/><stop offset=".8" stop-color="#125aff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="tr-fade" gradientUnits="userSpaceOnUse" x1="800" y1="0" x2="1090" y2="0"><stop stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+  <mask id="tr-soft-end" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254"><rect width="1254" height="1254" fill="url(#tr-fade)"/></mask>
+  <radialGradient id="tr-pool"><stop stop-color="#086bff" stop-opacity=".18"/><stop offset="1" stop-color="#086bff" stop-opacity="0"/></radialGradient>
+  <filter id="tr-bloom" x="-35%" y="-150%" width="170%" height="400%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="15"/></filter>
+  <filter id="tr-source" x="-150%" y="-150%" width="400%" height="400%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
+  <clipPath id="tr-clip"><path d="M340 20H914C1125 20 1234 129 1234 340V914C1234 1125 1125 1234 914 1234H340C129 1234 20 1125 20 914V340C20 129 129 20 340 20Z"/></clipPath>
+</defs>
+
+<g clip-path="url(#tr-clip)">
+  <path d="M0 0H1254V1254H0Z" fill="url(#tr-tile)"/>
+  <path d="M0 0H1254V1254H0Z" fill="url(#tr-surface)"/>
+  <g fill="#b6bfca" opacity=".24">
+    <rect x="220" y="415" width="221" height="62" rx="31"/><rect x="220" y="568" width="221" height="62" rx="31"/>
+    <rect x="220" y="721" width="221" height="62" rx="31"/><rect x="220" y="873" width="814" height="62" rx="31"/>
+    <rect x="657" y="415" width="377" height="62" rx="31"/><rect x="609" y="568" width="425" height="62" rx="31"/>
+    <rect x="517" y="721" width="517" height="62" rx="31"/>
+  </g>
+  <path d="M250 286H1004M548 286V750" fill="none" stroke="url(#tr-white)" stroke-width="62" stroke-linecap="round"/>
+  <g class="light" opacity="1">
+    <ellipse cx="710" cy="765" rx="470" ry="330" fill="url(#tr-pool)"/>
+    <g class="fan" mask="url(#tr-soft-end)">
+      <path d="M277 973L1080 105L1060 900Z" fill="url(#tr-beam)"/>
+      <path d="M277 973L1080 105" fill="none" stroke="url(#tr-edge)" stroke-width="3"/>
+    </g>
+  </g>
+  <g class="first" opacity="1"><rect x="769" y="415" width="265" height="62" rx="31" fill="#0565ff" filter="url(#tr-bloom)"/><rect x="769" y="415" width="265" height="62" rx="31" fill="url(#tr-white)"/></g><g class="second" opacity="1"><rect x="715" y="568" width="319" height="62" rx="31" fill="#0565ff" filter="url(#tr-bloom)"/><rect x="715" y="568" width="319" height="62" rx="31" fill="url(#tr-white)"/></g><g class="third" opacity="1"><rect x="662" y="721" width="372" height="62" rx="31" fill="#0565ff" filter="url(#tr-bloom)"/><rect x="662" y="721" width="372" height="62" rx="31" fill="url(#tr-white)"/></g><g class="bottom" opacity="1"><rect x="609" y="873" width="425" height="62" rx="31" fill="#0565ff" filter="url(#tr-bloom)"/><rect x="609" y="873" width="425" height="62" rx="31" fill="url(#tr-white)"/></g>
+  <g class="pulse" opacity="0"><circle class="ring" cx="277" cy="973" r="32" fill="none" stroke="#48c5ff" stroke-width="3"/></g>
+  <g class="source" opacity="1"><circle cx="277" cy="973" r="39" fill="#035bff" filter="url(#tr-source)"/><circle cx="277" cy="973" r="26" fill="#29b7ff"/><circle cx="277" cy="973" r="23" fill="#fff"/></g>
+</g>
+<path d="M340 22H914C1124 22 1232 130 1232 340V914C1232 1124 1124 1232 914 1232H340C130 1232 22 1124 22 914V340C22 130 130 22 340 22Z" fill="none" stroke="url(#tr-rim)" stroke-width="3"/>
+</svg>

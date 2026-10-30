@@ -1,0 +1,39 @@
+name: Report a reproducible issue
+description: Describe a TextRay problem with a small, non-private example.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "For activation or purchases, email hello@burritoslabs.com. Keep private text, license codes and library databases out of public issues. Report security concerns privately as described in SECURITY.md."
+  - type: input
+    id: version
+    attributes:
+      label: TextRay version and build
+      placeholder: "From About TextRay"
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: macOS version and Mac architecture
+      placeholder: "For example, macOS version and Apple silicon or Intel"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use fictional text. Include the relevant session, workspace or View scope if it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: frequency
+    attributes:
+      label: Frequency and recovery
+      description: Does it happen every time? Does reopening the window or app change it?

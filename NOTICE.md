@@ -1,11 +1,9 @@
 # Notice
 
-This repository is a public portfolio mirror for TextRay.
+Copyright © 2026 Burrito’s Labs LLC. All rights reserved.
 
-The TextRay source code is private and is not included in this repository. Screenshots and documentation are provided for portfolio and evaluation purposes only.
+This repository shares TextRay product information, technical explanations, screenshots and branding for evaluation and reference. It is not an open-source release of the application. Application source and commercial services remain private.
 
-The TextRay name, logo, and branding assets are included for project identification only. They should not be reused without permission unless the owner later publishes an explicit license for those assets.
+TextRay’s name, logo and studio artwork identify the product and its maker. Their inclusion does not grant a general license to reuse the branding. Contact Burrito’s Labs for other uses.
 
-Do not imply that this mirror grants open-source rights to TextRay, its source code, its name, its logo, or its branding assets.
-
-This mirror does not include app binaries, package artifacts, credentials, certificates, signing profiles, user notes, drafts, local metadata, or release artifacts.
+Third-party software used by the application retains its own license and bundled notices. This notice does not replace those licenses. The website and app provide the terms that apply to obtaining and using TextRay.

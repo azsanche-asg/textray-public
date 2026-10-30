@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Purchases, activation and private support
+    url: mailto:hello@burritoslabs.com
+    about: Keep purchase information and license codes out of public issues.
+  - name: Security reporting
+    url: https://github.com/azsanche-asg/textray-public/blob/main/SECURITY.md
+    about: Report sensitive vulnerabilities privately.

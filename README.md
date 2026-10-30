@@ -1,215 +1,64 @@
-<p align="center">
-  <img src="assets/TextRay-logo.png" alt="TextRay logo" width="128">
-</p>
+<img src="assets/textray.svg" alt="TextRay: a blue ray passing through lines of text" width="88">
 
-# TextRay — Local-First Text Workspace for macOS
+# TextRay
 
-Write anything. Keep it open. Find it instantly. Organize naturally through live Views.
+### Work faster with text.
 
-![macOS](https://img.shields.io/badge/platform-macOS-lightgrey)
-![Swift](https://img.shields.io/badge/Swift-Swift-orange)
-![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-blue)
-![Local first](https://img.shields.io/badge/local--first-yes-brightgreen)
-![No telemetry](https://img.shields.io/badge/telemetry-none-brightgreen)
-![Private source](https://img.shields.io/badge/source-private-critical)
-![Portfolio mirror](https://img.shields.io/badge/repo-portfolio%20mirror-informational)
+A native Mac text editor that cuts the effort of saving, organizing and finding your work. Start typing without choosing a filename. Search across saved files and unsaved drafts. Put a session aside and return with your text, windows and editing position ready.
 
-## Public Mirror Notice
+**Your work moves forward. The housekeeping stays out of the way.**
 
-This repository is a public portfolio mirror for TextRay. It contains documentation, screenshots, architecture notes, branding assets, and product information only. The TextRay source code is private and is not included in this repository.
+[How it works](docs/PRODUCT_WALKTHROUGH.md) · [Architecture](docs/ARCHITECTURE_OVERVIEW.md) · [Technology](docs/TECH_STACK.md) · [Engineering evidence](docs/QUALIFICATION.md)
 
-This mirror is not an open-source release, does not include app binaries, and should not be treated as a public download channel.
+![TextRay with an article, research drafts and a rendered Markdown preview](screenshots/writing.jpg)
 
-## Product Preview
+*Real app, fictional publication. This capture is from the pre-release 0.2 (26) build; the test-library label is intentional.*
 
-Screenshots are stored in [`screenshots/`](screenshots/). They are captured only from neutral demo content so the portfolio mirror does not expose user notes, internal development notes, local metadata, credentials, or private paths.
+## Fewer steps around the work
 
-### Main Workspace
+| When you want to… | TextRay helps you… |
+| --- | --- |
+| Start immediately | Open a window or tab and type. Drafts are retained automatically, without a filename decision. |
+| Find the right detail | Search a document, session, workspace, folder project or retained library. Unsaved edits participate. |
+| Keep a question in sight | Save a live View for a trace ID, TODO marker or exact phrase. Its results follow relevant edits. |
+| Switch contexts | Resume named or automatic sessions. Arrange free windows and link windows or tabs in overlapping workspaces. |
+| Revise confidently | Name a checkpoint, inspect differences, and restore earlier text as a separate copy. |
+| Finish the text | Use multi-caret editing, folds, snippets, reusable commands, heading navigation and live Markdown preview. Save ordinary files when ready. |
 
-![TextRay main editor with a neutral demo draft](screenshots/main-editor.png)
+## One editor, several kinds of work
 
-The editor keeps drafts and notes close to plain text, with tabs, recent context, autosave state, and note promotion actions visible in the main workspace.
+- **Investigations:** keep logs, commands and evolving hypotheses together, then clear your tabs without discarding the evidence.
+- **Writing and publishing:** assemble sources, track editorial TODOs, preview Markdown and make precise terminology changes.
+- **Projects and meetings:** start a session with useful templates, pin a return note, and resume the right arrangement later.
 
-### Palette Search
+These are workflows built from the same documents, sessions, workspaces and Views. You can mix them or start with an empty tab.
 
-![TextRay palette showing deterministic search results for project alpha](screenshots/palette-search.png)
+## Search that keeps up with the text
 
-The palette combines keyboard navigation, search results, and View creation. This example uses neutral demo content to show literal matching for `project alpha`.
+![A saved editorial TODO View finding three matches across unsaved publication drafts](screenshots/views.jpg)
 
-### Settings And Privacy
+Views store a query and its scope, not another copy of your documents. Fixed targets stay attached to the chosen session, workspace or project; following scopes visibly track the current context. The matcher is deterministic, with literal and regular-expression search, case and whole-word controls, and explicit optional normalization or typo tolerance.
 
-![TextRay Search settings with exact, punctuation-normalized, typo-tolerant, and non-semantic behavior](screenshots/settings-search.png)
+[Search design and tradeoffs](docs/SEARCH_DESIGN.md)
 
-Search settings describe the deterministic match modes and the non-semantic guarantee.
+## Built to keep work recoverable
 
-![TextRay Privacy/Data settings explaining local-only storage and no telemetry](screenshots/settings-privacy.png)
+Documents and organization live in a transactional local library. Inactive tabs keep metadata instead of requiring every document buffer to stay resident. Optional iCloud sync exchanges records and content through your private CloudKit database. Local editing remains available offline.
 
-Privacy/Data settings make the local-only, no-telemetry, no-cloud, no-AI posture explicit.
+[Storage, memory and recovery](docs/ARCHITECTURE_OVERVIEW.md) · [Privacy and data boundaries](docs/PRIVACY_AND_LOCAL_FIRST.md)
 
-![TextRay Storage settings header showing local storage transparency without exposing private paths](screenshots/settings-storage.png)
+## Getting TextRay
 
-Storage settings document where TextRay keeps notes, drafts, metadata, and local trash. This public crop intentionally omits absolute local path rows.
+Download TextRay 1.0, watch real workflows and start the full 30-day trial at the [official TextRay website](https://textray.burritoslabs.com/). No card or account is required to start the trial. The website is the canonical download and purchase destination. During the initial rollout, the trial is available while checkout remains closed for final production payment and email-delivery checks.
 
-![TextRay Shortcuts/About settings with identity, alpha status, local and non-AI summary, and shortcuts](screenshots/shortcuts-about.png)
+The planned offer is **€39.99 including applicable taxes, once for TextRay 1.x on two personal Macs**. A **full 30-day trial** starts explicitly in the app, with no card or account required. Released 1.x updates are included; future major upgrades are optional. There is no subscription or separate TextRay charge for iCloud sync or Views.
 
-Shortcuts/About gives the app identity, alpha status, local/non-AI reminder, and keyboard shortcut reference.
+At trial expiry, retained text remains accessible for reading, copying, saving, exporting and recovery. Trial expiry does not delete your work.
 
-### First Run And Distribution
+The current candidate has been qualified on Apple silicon with macOS 26.6.2. Other systems are not advertised as qualified solely because the app compiles for them. See [distribution and compatibility](docs/PACKAGING_AND_DISTRIBUTION.md).
 
-![TextRay first-run onboarding explaining local-first storage and deterministic search](screenshots/onboarding.png)
+## About this repository
 
-First-run onboarding explains what TextRay is, what stays local, and how search and Views behave.
+This is TextRay’s public product and engineering reference from [Burrito’s Labs](https://burritoslabs.com/). It contains documentation, artwork and neutral screenshots. Application source, development history and binaries are not included. Official downloads will come from the website.
 
-![TextRay mounted DMG install window](screenshots/dmg-install.png)
-
-The DMG install screenshot shows the direct-distribution install surface only. This mirror does not include the DMG, the app bundle, or any release artifact.
-
-See [`screenshots/README.md`](screenshots/README.md) for capture status, hygiene rules, and any missing screenshot notes.
-
-## Overview
-
-TextRay is a macOS-first, local-first text workspace for people who write many notes, drafts, snippets, code fragments, chapters, and research fragments.
-
-It is not an AI notes app. TextRay is designed around deterministic text workflows: local files, visible storage, fast tabs, direct editing, predictable search, and Views that behave like live saved searches instead of opaque folders or semantic categories.
-
-The product goal is a writing workspace that stays close to plain text while still feeling like a real Mac app: onboarding, tabs, palette navigation, settings, privacy/data controls, install guidance, verified Release builds, and a DMG-first distribution path.
-
-## Key Features
-
-- Local notes and drafts stored as user-owned text files.
-- Tabs and workspace restore for keeping many writing contexts open.
-- Deterministic search over notes and drafts.
-- Exact, punctuation-normalized, and typo-tolerant matching.
-- No AI search, no semantic search, and no synonym inference.
-- Views as saved live searches rather than folders.
-- Suggested Views derived from local-only usage signals.
-- First-run onboarding that explains local storage and privacy.
-- Storage transparency surfaces that show where files and metadata live.
-- Privacy/Data settings for local-first behavior and cleanup controls.
-- Shortcuts/About help surface for quick orientation.
-- DMG-first direct macOS distribution path.
-
-## Technology Stack
-
-- Swift.
-- SwiftUI.
-- macOS.
-- XCTest.
-- Local JSON metadata for workspace, recents, settings, Views, and usage signals.
-- Plain text notes and drafts as the durable source of truth.
-- Atomic file writing for local data safety.
-- Deterministic search pipeline with explicit match quality.
-- Performance benchmark suite for search, corpus build, palette responsiveness, workspace restore, and large files.
-- Shell scripts for Release builds, packaging, signing checks, and Developer ID signing preparation.
-- `hdiutil`, `codesign`, and `spctl` for DMG packaging and signing verification.
-
-## Architecture
-
-TextRay is organized as a local-first Mac app with clear boundaries:
-
-- Storage: resolves the TextRay folder, creates required directories, reads/writes notes, drafts, metadata, trash, imports, and backups.
-- Workspace/Tabs: models open contexts, restores tab order, active tab state, document references, and recent documents.
-- Editor: coordinates plain-text editing, autosave, draft promotion, and note-safe document operations.
-- Palette: exposes keyboard-first navigation over tabs, recents, notes, actions, create flows, and search results.
-- Search: builds a local corpus and ranks exact, normalized, and typo-tolerant matches deterministically.
-- Views/Suggested Views: stores saved searches and derives suggestions from local usage signals.
-- Settings/Privacy: provides search behavior, Views suggestions, storage visibility, privacy/data controls, and help/about surfaces.
-- Packaging/Distribution: builds Release artifacts, packages DMGs, checks signing state, and documents the private-alpha install path.
-
-Read more in [`docs/ARCHITECTURE_OVERVIEW.md`](docs/ARCHITECTURE_OVERVIEW.md).
-
-## Technical Highlights
-
-- Local-first file model: user notes and drafts stay on disk as text files.
-- Files as source of truth: metadata supports the workspace but does not replace user files.
-- Atomic writes: metadata and draft/note updates are written through safe local file operations.
-- Conflict-aware storage: file operations avoid overwriting existing notes and preserve working context.
-- Local trash: destructive document flows move through local safety paths instead of silent deletion.
-- Backup/export: private-alpha data safety flows are documented and covered by tests.
-- Import existing notes folder: users can bring existing `.txt` and `.md` files into TextRay.
-- Deterministic search and ranking: TextRay explains why a result matched and does not infer meaning.
-- Performance instrumentation: benchmark coverage tracks search, corpus building, palette responsiveness, large files, and workspace restore.
-- Privacy-first design: no telemetry, no cloud sync, no remote indexing, and no AI/semantic search.
-- Developer ID signed DMG path: direct-distribution packaging and signing verification have been implemented for the private-alpha path when a local signing identity is available.
-
-## Privacy Model
-
-TextRay is designed for local control:
-
-- No telemetry.
-- No cloud sync.
-- No AI or semantic indexing.
-- Notes and drafts stay local.
-- Metadata stays local.
-- User files are the source of truth.
-- Search usage signals are local-only and support Suggested Views.
-- Packaging and public mirror artifacts do not include notes, drafts, `.textray` metadata, local trash, credentials, or signing material.
-
-Read more in [`docs/PRIVACY_AND_LOCAL_FIRST.md`](docs/PRIVACY_AND_LOCAL_FIRST.md).
-
-## Search Design
-
-TextRay search is deterministic and explicit:
-
-- Exact matching finds literal text.
-- Punctuation-normalized matching treats mechanical separators consistently, so `project alpha` and `project-alpha` can match.
-- Typo-tolerant matching catches small mechanical typos, such as `funtion` matching `function`.
-- Semantic substitutes do not match: `car` does not mean `automobile`, `doctor` does not mean `physician`, and `function` does not mean `method`.
-
-Read more in [`docs/SEARCH_DESIGN.md`](docs/SEARCH_DESIGN.md).
-
-## Distribution Status
-
-TextRay is currently private-source and in a private-alpha/direct-distribution preparation state.
-
-- Direct DMG distribution is the current direction.
-- Release builds pass in the private repository.
-- DMG packaging exists for private-alpha inspection.
-- Developer ID signed-app DMG verification has been implemented when an appropriate local signing identity is available.
-- Notarization is not complete.
-- Stapling is not complete.
-- The Mac App Store is not the current target.
-- Public release is not complete.
-- This mirror does not include app binaries, DMGs, ZIPs, certificates, signing identities, or credentials.
-
-Read more in [`docs/PACKAGING_AND_DISTRIBUTION.md`](docs/PACKAGING_AND_DISTRIBUTION.md).
-
-## Roadmap
-
-- Complete notarization and stapling for the direct-distribution path.
-- Finish the private alpha release checklist.
-- Polish public mirror screenshots and optional demo video.
-- Harden based on private alpha feedback.
-- Continue editor improvements where SwiftUI limitations require deeper AppKit integration.
-- Audit possible App Store/TestFlight requirements later if that becomes a product goal.
-
-Read more in [`docs/ROADMAP.md`](docs/ROADMAP.md).
-
-## Repository Structure
-
-```text
-TextRay-public/
-  README.md
-  assets/
-    TextRay-logo.png
-    README.md
-  docs/
-    ARCHITECTURE_OVERVIEW.md
-    PRIVACY_AND_LOCAL_FIRST.md
-    SEARCH_DESIGN.md
-    PRODUCT_WALKTHROUGH.md
-    PACKAGING_AND_DISTRIBUTION.md
-    ROADMAP.md
-  screenshots/
-    README.md
-    *.png
-  NOTICE.md
-  PUBLIC_MIRROR_AUDIT.md
-  .gitignore
-```
-
-## Portfolio Note
-
-This mirror is intended as a technical and product showcase for TextRay: local-first product design, macOS app architecture, data safety, deterministic search, privacy controls, performance instrumentation, and direct-distribution packaging.
-
-It intentionally excludes the private source code, build project, tests, app binaries, package artifacts, credentials, certificates, user data, and local metadata.
+[Support](SUPPORT.md) · [Security reports](SECURITY.md) · [Release direction](docs/ROADMAP.md) · [Notice](NOTICE.md)

@@ -1,56 +1,47 @@
-# Product Walkthrough
+# A short working example
 
-This walkthrough describes the current TextRay private-alpha experience at a product level. It does not include private source code.
+Start with the text. Add organization when it helps.
 
-## First-Run Onboarding
+## Capture
 
-On first launch, TextRay explains the local-first storage model, the TextRay folder, notes, drafts, metadata, and privacy assumptions. Onboarding is designed to make local storage transparent before the user starts writing.
+Open a window or tab and type or paste a few lines. A filename is optional. TextRay derives a title from the text; for Markdown, a front-matter title or heading can provide a useful name. Document Actions lets you set a display title without changing the content or the external filename.
 
-## Writing A Draft
+“Stored in TextRay” means the local recovery library has the work. “Unsaved file changes” means the chosen external original has not yet been updated. Sync status is shown separately.
 
-The app opens into a plain-text editor. When meaningful text is entered, TextRay autosaves it as a local draft. Empty launch state does not create unnecessary files.
+## Gather an investigation, publication or meeting
 
-## Saving As A Note
+Use **Start a Session** for a blank context or a small starter. Add research, code, meeting notes or drafts as needed. A session gives you a place to return to; its name is optional.
 
-A draft can be promoted to a normal note. TextRay derives a practical filename from the title or first meaningful line and avoids overwriting existing notes by creating a unique filename when needed.
+Arrange windows freely. If a useful group spans several windows or individual tabs, link them in a workspace. Workspaces can overlap. **Focus** brings that group forward; **Show All** restores access to other windows.
 
-## Tabs
+A project is simply a folder you register. Use it when work already lives in a directory. You do not need a project to keep scratch text.
 
-Tabs keep multiple contexts open: blank drafts, autosaved drafts, and saved notes. Closing a tab closes the workspace context; it does not delete the underlying local file.
+## Keep the next question visible
 
-Workspace metadata restores open tabs after relaunch when referenced files still exist.
+Open **Search & Views** and search for a marker such as `TODO:` or a specific trace ID. Choose the named session or workspace as a fixed target, then save the query as a View. Editing an unsaved matching draft updates its results.
 
-## Palette
+A following scope changes with the current context. Use a fixed target when a View should stay with one investigation or publication. The target label tells you which behavior you selected.
 
-The palette provides keyboard-first navigation. It can show open tabs, recents, notes, actions, create-draft fallback items, and search results.
+Search results offer an explicit destination: open in the current context or resume the document’s session. Opening the same document in another window shares its text. To branch a draft, create a separate copy instead.
 
-## Search
+## Revise and recover
 
-Search covers local notes and drafts. Results identify match quality: exact, punctuation-normalized, or typo-tolerant. Search is deterministic and does not infer synonyms or semantic similarity.
+Before a substantial change, use **Document Actions → Document History** to create a named checkpoint. Inspect the difference after editing. **Restore as New Copy** brings the earlier text back separately, keeping the newer draft intact.
 
-## Views
+![Document History comparing a fictional article revision with an earlier checkpoint](../screenshots/history.jpg)
 
-Views are live saved searches. They help organize writing by query while leaving notes as local files rather than moving them into opaque containers.
+*Real pre-release 0.2 (26) capture, using fictional text.*
 
-Suggested Views can surface repeated local search patterns when enabled.
+Close a tab when it is out of the way. Quick Open can broaden its search to **Library, Including Closed Documents**. **Recently Closed** restores the closed arrangement and its session membership.
 
-## Settings
+## Put it aside, then return
 
-Settings include:
+Use **Close Session** when you want to put the whole context aside. Resume it from the visible session selector. A return note can keep your next action, open question and latest decision close to the session.
 
-- General.
-- Storage.
-- Search.
-- Views and Suggestions.
-- Privacy/Data.
-- Shortcuts/About.
+Closing a single window and closing a session have different effects on the arrangement. Neither action is the same as explicitly discarding a document. Fixed Views use the selected scope’s membership, not every text item that happens to remain in Library.
 
-Search and Suggested Views settings expose persistent controls. Storage and privacy surfaces explain local-first behavior and data boundaries.
+## Finish when ready
 
-## Storage And Privacy
+For writing, use inline word counts, **Headings & Symbols**, Markdown preview, snippets and replacement preview. For code or troubleshooting, use multiple carets, folding and reusable commands. Commands keep output and diagnostics distinct, and do not silently replace newer edits made during execution.
 
-TextRay shows where notes, drafts, metadata, and local trash live. Privacy/Data controls explain that there is no telemetry, no cloud sync, and no AI/semantic indexing.
-
-## Help And Shortcuts
-
-The Shortcuts/About surface documents key commands and product assumptions so users can orient quickly without leaving the app.
+Save a normal `.md`, `.txt`, `.py` or other text file when you want it outside TextRay. The [tutorial library](https://textray.burritoslabs.com/tutorials/) is the planned home for short real-app workflows with voiceover and switchable captions.

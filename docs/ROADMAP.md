@@ -1,36 +1,17 @@
-# Roadmap
+# Release direction
 
-This roadmap describes near-term product and distribution work. It is not a public release promise.
+TextRay’s focus is reducing the work around text: capture immediately, find precisely, revise safely and resume with context.
 
-## Direct Distribution
+## In the current release
 
-- Complete notarization.
-- Complete stapling.
-- Re-run signing and Gatekeeper verification after notarization.
-- Update install guidance after verified notarization/stapling.
+Persistent drafts; free windows and tabs; automatic and named sessions; overlapping workspaces; folder projects; deterministic search and live Views; checkpoints and recovery copies; opt-in iCloud sync; professional editing tools; Markdown preview; session starters and return notes; a 30-day trial, licensing and signed updates.
 
-## Private Alpha
+## Initial rollout
 
-- Finish the private alpha release checklist.
-- Keep install, first-run, screenshot, and demo guidance aligned with actual build status.
-- Harden behavior based on alpha feedback.
-- Continue manual QA around onboarding, storage, search, Views, Settings, Help, packaging, and clean demo flows.
+The signed 1.0.0 (28) trial, tutorials and website are public. Checkout remains closed while production payment and email-delivery checks are completed. Private test-payment evidence and public download artifacts are identified separately.
 
-## Public Mirror
+## After launch
 
-- Review screenshots manually before publishing.
-- Retake screenshots after UI polish or notarization/stapling changes.
-- Add an optional short demo video when the private owner approves.
-- Keep distribution status honest as the private project advances.
+Prioritize reliability, predictable native behavior and useful editing depth around the existing workflow. Consider broader hardware/OS qualification and improvements supported by real usage. Avoid adding another organizational concept when the existing model can solve the task.
 
-## Product Improvements
-
-- Continue editor polish.
-- Evaluate deeper AppKit editor integration for cursor/scroll restoration and advanced text behavior.
-- Continue performance instrumentation for search, palette responsiveness, large files, and workspace restore.
-- Keep local-first privacy controls understandable and testable.
-
-## Future Distribution Audit
-
-- Audit possible App Store or TestFlight requirements later if that becomes a goal.
-- Do not claim App Store readiness until the product and compliance review support it.
+This describes direction, not delivery dates or a commitment to specific future major-version features. The website and in-app update information will identify actual releases.
